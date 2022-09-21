@@ -32,7 +32,7 @@ function Calculator(){
 
   return(
     <>
-    <div className="flex flex-col">
+    <div className="flex flex-col p-5">
       <div className='mt-24'>
         <MultiRangeSlider 
           changeData={changeData}
@@ -103,7 +103,7 @@ function Modal({ isModalOpen, setIsModalOpen, inputData } : ModalProps){
   
   return(
     <Transition appear show={isOpen} as={Fragment}>
-      <Dialog as="div" className="relative z-10" onClose={() => setIsOpen(false)}>
+      <Dialog as="div" className="relative z-10" onClose={() => setIsModalOpen(false)}>
         <Transition.Child
           as={Fragment}
           enter="ease-out duration-300"
@@ -129,6 +129,7 @@ function Modal({ isModalOpen, setIsModalOpen, inputData } : ModalProps){
             >
               {!emailVerified ?
               <Dialog.Panel className="flex flex-col w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                <button className="w-10 h-10 ml-auto border border-blue-500 rounded-md" onClick={() => setIsModalOpen(false)}> X </button>
                 <Dialog.Title
                   as="h3"
                   className="text-lg font-medium leading-6 text-gray-900"

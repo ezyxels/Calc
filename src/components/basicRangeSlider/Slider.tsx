@@ -29,7 +29,7 @@ export default function BasicRangeSlider({ changeData, id, min, max, skip, title
       </div>
       <div className="flex w-full mt-6 justify-between">
         <button 
-          className="w-7 h-7 rounded-full border-2 border-black"
+          className="w-8 h-8 rounded-full border-2 border-black"
           onClick={() => (value >= min + skip && setValueAndInputData(value - skip))}
         > 
           - 
@@ -50,7 +50,7 @@ export default function BasicRangeSlider({ changeData, id, min, max, skip, title
           </div>
         </div>
         <button 
-          className="w-7 h-7 rounded-full border-2 border-black"
+          className="w-8 h-8 rounded-full border-2 border-black"
           onClick={() => (value <= max - skip && setValueAndInputData(value + skip))}
           > 
             +
